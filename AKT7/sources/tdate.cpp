@@ -22,7 +22,7 @@ TDate::TDate(unsigned short day, unsigned short month, unsigned short year) {
 
 TDate::TDate() {
     time_t t = time(0);
-    struct tm * now = localtime( & t );
+    struct tm * now = localtime(&t);
     this->day = now->tm_mday;
     this->month = now->tm_mon + 1;
     this->year = now->tm_year + 1900;
@@ -70,5 +70,7 @@ short TDate::getYear() {
 
 // Print
 void TDate::print() {
-    printf("%02u.%02u.%04u", day, month, year);
+    std::cout << std::setfill('0') << std::setw(2) << day << '.';
+    std::cout << std::setfill('0') << std::setw(2) << month << '.';
+    std::cout << std::setfill('0') << std::setw(2) << year;
 }

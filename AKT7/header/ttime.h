@@ -12,7 +12,10 @@
 #include <ctime>
 #include <string>
 #include <stdio.h>
+#include <iomanip>
+#include <iostream>
 #include <stdexcept>
+
 
 class TTime {
 public:

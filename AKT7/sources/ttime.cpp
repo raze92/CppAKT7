@@ -24,7 +24,7 @@ TTime::TTime(unsigned short hour, unsigned short minute, unsigned short second) 
 
 TTime::TTime() {
     time_t t = time(0);
-    struct tm * now = localtime( & t );
+    struct tm * now = localtime(&t);
     this->hour = now->tm_hour;
     this->minute = now->tm_min;
     this->second = now->tm_sec;
@@ -76,9 +76,9 @@ short TTime::getSecond() {
 
 // Print
 void TTime::print() {
-    if(second == 0) {
-        printf("%02u:%02u", hour, minute);
-    } else {
-        printf("%02u:%02u:%02u", hour, minute,second);
+    std::cout << std::setfill('0') << std::setw(2) << hour << ':';
+    std::cout << std::setfill('0') << std::setw(2) << minute;
+    if(second != 0) {
+        std::cout << ':' << std::setfill('0') << std::setw(2) << second;
     }
 }
