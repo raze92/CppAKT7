@@ -20,22 +20,22 @@ public:
     short getYear();
     
     // Setter
-    void setDate(short day, short month, short year);
-    void setDay(short day);
-    void setMonth(short month);
-    void setYear(short year);
+    void setDate(unsigned short day, unsigned short month, unsigned short year);
+    void setDay(unsigned short day);
+    void setMonth(unsigned short month);
+    void setYear(unsigned short year);
     
     // Print
     void print();
     
     // Constructor
-    TDate(short day, short month, short year);
+    TDate(unsigned short day, unsigned short month, unsigned short year);
     TDate();
     
 private:
-    short day;
-    short month;
-    short year;
+    unsigned short day;
+    unsigned short month;
+    unsigned short year;
 };
 
 #endif /* tdate_h */

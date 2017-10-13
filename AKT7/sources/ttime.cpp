@@ -20,35 +20,56 @@ short TTime::getSecond() {
 }
 
 // Getter
-void TTime::setTime(short hour, short minute, short second) {
+void TTime::setTime(unsigned short hour,unsigned short minute,unsigned short second) {
+    if(hour > 23)
+        throw std::invalid_argument("Invalid hour value");
+    if(minute > 59)
+        throw std::invalid_argument("Invalid minute value");
+    if(second > 59)
+        throw std::invalid_argument("Invalid second value");
+    
     this->hour = hour;
     this->minute = minute;
     this->second = second;
 }
 
-void TTime::setHour(short hour) {
+void TTime::setHour(unsigned short hour) {
+    if(hour > 23)
+        throw std::invalid_argument("Invalid hour value");
+    
     this->hour = hour;
 }
 
-void TTime::setMinute(short minute) {
+void TTime::setMinute(unsigned short minute) {
+    if(minute > 59)
+        throw std::invalid_argument("Invalid minute value");
     this->minute = minute;
 }
 
-void TTime::setSecond(short second) {
+void TTime::setSecond(unsigned short second) {
+    if(second > 59)
+        throw std::invalid_argument("Invalid second value");
     this->second = second;
 }
 
 // Print
 void TTime::print() {
     if(second == 0) {
-        printf("%02d:%02d", hour, minute);
+        printf("%02u:%02u", hour, minute);
     } else {
-        printf("%02d:%02d:%02d", hour, minute,second);
+        printf("%02u:%02u:%02u", hour, minute,second);
     }
 }
 
 // Constructor
-TTime::TTime(short hour, short minute, short second) {
+TTime::TTime(unsigned short hour, unsigned short minute, unsigned short second) {
+    if(hour > 23)
+        throw std::invalid_argument("Invalid hour value");
+    if(minute > 59)
+        throw std::invalid_argument("Invalid minute value");
+    if(second > 59)
+        throw std::invalid_argument("Invalid second value");
+    
     this->hour = hour;
     this->minute = minute;
     this->second = second;

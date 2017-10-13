@@ -12,6 +12,7 @@
 #include <ctime>
 #include <string>
 #include <stdio.h>
+#include <stdexcept>
 
 class TTime {
 public:
@@ -21,22 +22,22 @@ public:
     short getSecond();
     
     // Setter
-    void setTime(short hour, short minute, short second);
-    void setHour(short hour);
-    void setMinute(short minute);
-    void setSecond(short second);
+    void setTime(unsigned short hour, unsigned short minute, unsigned short second);
+    void setHour(unsigned short hour);
+    void setMinute(unsigned short minute);
+    void setSecond(unsigned short second);
     
     // Print
     void print();
     
     // Constructor
-    TTime(short hour, short minute, short second = 0);
+    TTime(unsigned short hour, unsigned short minute, unsigned short second = 0);
     TTime();
     
 private:
-    short hour;
-    short minute;
-    short second;
+    unsigned short hour;
+    unsigned short minute;
+    unsigned short second;
 };
 
 

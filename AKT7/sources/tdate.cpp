@@ -20,31 +20,46 @@ short TDate::getYear() {
 }
 
 // Getter
-void TDate::setDate(short day, short month, short year) {
+void TDate::setDate(unsigned short day, unsigned short month, unsigned short year) {
+    if(day > 31)
+        throw std::invalid_argument("Invalid day value");
+    if(month > 12)
+        throw std::invalid_argument("Invalid month value");
+    
     this->day = day;
     this->month = month;
     this->year = year;
 }
 
-void TDate::setDay(short day) {
+void TDate::setDay(unsigned short day) {if(day > 31)
+    throw std::invalid_argument("Invalid day value");
+    
     this->day = day;
 }
 
-void TDate::setMonth(short month) {
+void TDate::setMonth(unsigned short month) {
+    if(month > 12)
+        throw std::invalid_argument("Invalid month value");
+    
     this->month = month;
 }
 
-void TDate::setYear(short year) {
+void TDate::setYear(unsigned short year) {
     this->year = year;
 }
 
 // Print
 void TDate::print() {
-    printf("%02d.%02d.%04d", day, month, year);
+    printf("%02u.%02u.%04u", day, month, year);
 }
 
 // Constructor
-TDate::TDate(short day, short month, short year) {
+TDate::TDate(unsigned short day, unsigned short month, unsigned short year) {
+    if(day > 31)
+        throw std::invalid_argument("Invalid day value");
+    if(month > 12)
+        throw std::invalid_argument("Invalid month value");
+    
     this->day = day;
     this->month = month;
     this->year = year;
