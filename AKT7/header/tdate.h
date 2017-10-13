@@ -14,6 +14,10 @@
 
 class TDate {
 public:
+    // Constructor
+    TDate(unsigned short day, unsigned short month, unsigned short year);
+    TDate();
+    
     // Getter
     short getDay();
     short getMonth();
@@ -27,10 +31,6 @@ public:
     
     // Print
     void print();
-    
-    // Constructor
-    TDate(unsigned short day, unsigned short month, unsigned short year);
-    TDate();
     
 private:
     unsigned short day;

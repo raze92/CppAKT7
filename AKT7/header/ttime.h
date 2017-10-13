@@ -16,6 +16,10 @@
 
 class TTime {
 public:
+    // Constructor
+    TTime(unsigned short hour, unsigned short minute, unsigned short second = 0);
+    TTime();
+    
     // Getter
     short getHour();
     short getMinute();
@@ -29,10 +33,6 @@ public:
     
     // Print
     void print();
-    
-    // Constructor
-    TTime(unsigned short hour, unsigned short minute, unsigned short second = 0);
-    TTime();
     
 private:
     unsigned short hour;
