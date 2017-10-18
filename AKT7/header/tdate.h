@@ -35,9 +35,9 @@ public:
     void print();
     
 private:
-    unsigned short day;
-    unsigned short month;
-    unsigned short year;
+    unsigned short Day;
+    unsigned short Month;
+    unsigned short Year;
 };
 
 #endif /* tdate_h */

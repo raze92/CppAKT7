@@ -10,6 +10,10 @@
 		860B33ED1F8917A5002AECAB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 860B33EC1F8917A5002AECAB /* main.cpp */; };
 		860B33F91F891DCB002AECAB /* tdate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 860B33F81F891DCB002AECAB /* tdate.cpp */; };
 		860B33FB1F891DFD002AECAB /* ttime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 860B33FA1F891DFD002AECAB /* ttime.cpp */; };
+		86B16E1B1F97C04400BA6C2A /* taddress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86B16E1A1F97C04400BA6C2A /* taddress.cpp */; };
+		86B16E1E1F97C47200BA6C2A /* tperson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86B16E1D1F97C47200BA6C2A /* tperson.cpp */; };
+		86B1AD561F910A2A0050040C /* troom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86B1AD551F910A2A0050040C /* troom.cpp */; };
+		86B1AD591F910EE60050040C /* tblock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86B1AD581F910EE60050040C /* tblock.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +35,14 @@
 		860B33F61F891B5D002AECAB /* ttime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ttime.h; sourceTree = "<group>"; };
 		860B33F81F891DCB002AECAB /* tdate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tdate.cpp; sourceTree = "<group>"; };
 		860B33FA1F891DFD002AECAB /* ttime.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ttime.cpp; sourceTree = "<group>"; };
+		86B16E191F97C00C00BA6C2A /* taddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = taddress.h; sourceTree = "<group>"; };
+		86B16E1A1F97C04400BA6C2A /* taddress.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = taddress.cpp; sourceTree = "<group>"; };
+		86B16E1C1F97C43100BA6C2A /* tperson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tperson.h; sourceTree = "<group>"; };
+		86B16E1D1F97C47200BA6C2A /* tperson.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tperson.cpp; sourceTree = "<group>"; };
+		86B1AD531F9109E50050040C /* troom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = troom.h; sourceTree = "<group>"; };
+		86B1AD551F910A2A0050040C /* troom.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = troom.cpp; sourceTree = "<group>"; };
+		86B1AD571F910ED40050040C /* tblock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tblock.h; sourceTree = "<group>"; };
+		86B1AD581F910EE60050040C /* tblock.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tblock.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +87,10 @@
 			children = (
 				860B33F51F89196A002AECAB /* tdate.h */,
 				860B33F61F891B5D002AECAB /* ttime.h */,
+				86B1AD531F9109E50050040C /* troom.h */,
+				86B1AD571F910ED40050040C /* tblock.h */,
+				86B16E191F97C00C00BA6C2A /* taddress.h */,
+				86B16E1C1F97C43100BA6C2A /* tperson.h */,
 			);
 			path = header;
 			sourceTree = "<group>";
@@ -84,6 +100,10 @@
 			children = (
 				860B33F81F891DCB002AECAB /* tdate.cpp */,
 				860B33FA1F891DFD002AECAB /* ttime.cpp */,
+				86B1AD551F910A2A0050040C /* troom.cpp */,
+				86B1AD581F910EE60050040C /* tblock.cpp */,
+				86B16E1A1F97C04400BA6C2A /* taddress.cpp */,
+				86B16E1D1F97C47200BA6C2A /* tperson.cpp */,
 			);
 			path = sources;
 			sourceTree = "<group>";
@@ -146,8 +166,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				860B33F91F891DCB002AECAB /* tdate.cpp in Sources */,
+				86B16E1B1F97C04400BA6C2A /* taddress.cpp in Sources */,
+				86B16E1E1F97C47200BA6C2A /* tperson.cpp in Sources */,
 				860B33ED1F8917A5002AECAB /* main.cpp in Sources */,
 				860B33FB1F891DFD002AECAB /* ttime.cpp in Sources */,
+				86B1AD591F910EE60050040C /* tblock.cpp in Sources */,
+				86B1AD561F910A2A0050040C /* troom.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -38,9 +38,9 @@ public:
     void print();
     
 private:
-    unsigned short hour;
-    unsigned short minute;
-    unsigned short second;
+    unsigned short Hour;
+    unsigned short Minute;
+    unsigned short Second;
 };
 
 
