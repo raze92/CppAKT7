@@ -8,14 +8,16 @@
 
 #include "ttime.h"
 
+using namespace std;
+
 // Constructor
 TTime::TTime(unsigned short hour, unsigned short minute, unsigned short second) {
     if(hour > 23)
-        throw std::invalid_argument("Invalid hour value");
+        throw invalid_argument("Invalid hour value");
     if(minute > 59)
-        throw std::invalid_argument("Invalid minute value");
+        throw invalid_argument("Invalid minute value");
     if(second > 59)
-        throw std::invalid_argument("Invalid second value");
+        throw invalid_argument("Invalid second value");
     
     this->Hour = hour;
     this->Minute = minute;
@@ -41,11 +43,11 @@ unsigned short TTime::getSecond() {
 // Setter
 void TTime::setTime(unsigned short hour,unsigned short minute,unsigned short second) {
     if(hour > 23)
-        throw std::invalid_argument("Invalid hour value");
+        throw invalid_argument("Invalid hour value");
     if(minute > 59)
-        throw std::invalid_argument("Invalid minute value");
+        throw invalid_argument("Invalid minute value");
     if(second > 59)
-        throw std::invalid_argument("Invalid second value");
+        throw invalid_argument("Invalid second value");
     
     this->Hour = hour;
     this->Minute = minute;
@@ -62,28 +64,28 @@ void TTime::setTime() {
 
 void TTime::setHour(unsigned short hour) {
     if(hour > 23)
-        throw std::invalid_argument("Invalid hour value");
+        throw invalid_argument("Invalid hour value");
     
     Hour = hour;
 }
 
 void TTime::setMinute(unsigned short minute) {
     if(minute > 59)
-        throw std::invalid_argument("Invalid minute value");
+        throw invalid_argument("Invalid minute value");
     Minute = minute;
 }
 
 void TTime::setSecond(unsigned short second) {
     if(second > 59)
-        throw std::invalid_argument("Invalid second value");
+        throw invalid_argument("Invalid second value");
     Second = second;
 }
 
 // Print
 void TTime::print() {
-    std::cout << std::setfill('0') << std::setw(2) << Hour << ':';
-    std::cout << std::setfill('0') << std::setw(2) << Minute;
+    cout << setfill('0') << setw(2) << Hour << ':';
+    cout << setfill('0') << setw(2) << Minute;
     if(Second != 0) {
-        std::cout << ':' << std::setfill('0') << std::setw(2) << Second;
+        cout << ':' << setfill('0') << setw(2) << Second;
     }
 }

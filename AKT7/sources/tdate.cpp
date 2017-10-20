@@ -8,12 +8,14 @@
 
 #include "tdate.h"
 
+using namespace std;
+
 // Constructor
 TDate::TDate(unsigned short day, unsigned short month, unsigned short year) {
     if(day > 31)
-        throw std::invalid_argument("Invalid day value");
+        throw invalid_argument("Invalid day value");
     if(month > 12)
-        throw std::invalid_argument("Invalid month value");
+        throw invalid_argument("Invalid month value");
     
     this->Day = day;
     this->Month = month;
@@ -38,9 +40,9 @@ unsigned short TDate::getYear() {
 // Setter
 void TDate::setDate(unsigned short day, unsigned short month, unsigned short year) {
     if(day > 31)
-        throw std::invalid_argument("Invalid day value");
+        throw invalid_argument("Invalid day value");
     if(month > 12)
-        throw std::invalid_argument("Invalid month value");
+        throw invalid_argument("Invalid month value");
     
     this->Day = day;
     this->Month = month;
@@ -55,15 +57,16 @@ void TDate::setDate() {
     this->Year = now->tm_year + 1900;
 }
 
-void TDate::setDay(unsigned short day) {if(day > 31)
-    throw std::invalid_argument("Invalid day value");
+void TDate::setDay(unsigned short day) {
+    if(day > 31)
+        throw invalid_argument("Invalid day value");
     
     this->Day = day;
 }
 
 void TDate::setMonth(unsigned short month) {
     if(month > 12)
-        throw std::invalid_argument("Invalid month value");
+        throw invalid_argument("Invalid month value");
     
     this->Month = month;
 }
@@ -74,7 +77,7 @@ void TDate::setYear(unsigned short year) {
 
 // Print
 void TDate::print() {
-    std::cout << std::setfill('0') << std::setw(2) << Day << '.';
-    std::cout << std::setfill('0') << std::setw(2) << Month << '.';
-    std::cout << std::setfill('0') << std::setw(2) << Year;
+    cout << setfill('0') << setw(2) << Day << '.';
+    cout << setfill('0') << setw(2) << Month << '.';
+    cout << setfill('0') << setw(2) << Year;
 }

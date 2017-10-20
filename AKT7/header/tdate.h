@@ -14,6 +14,8 @@
 #include <iomanip>
 #include <iostream>
 
+using namespace std;
+
 class TDate {
 public:
     // Constructor
