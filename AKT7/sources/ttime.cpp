@@ -27,13 +27,13 @@ TTime::TTime() {
 }
 
 // Getter
-short TTime::getHour() {
+unsigned short TTime::getHour() {
     return this->Hour;
 }
-short TTime::getMinute() {
+unsigned short TTime::getMinute() {
     return this->Minute;
 }
-short TTime::getSecond() {
+unsigned short TTime::getSecond() {
     return this->Second;
 }
 

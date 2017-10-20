@@ -21,9 +21,9 @@ public:
     TDate();
     
     // Getter
-    short getDay();
-    short getMonth();
-    short getYear();
+    unsigned short getDay();
+    unsigned short getMonth();
+    unsigned short getYear();
     
     // Setter
     void setDate(unsigned short day, unsigned short month, unsigned short year);

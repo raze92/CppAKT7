@@ -24,9 +24,9 @@ public:
     TTime();
     
     // Getter
-    short getHour();
-    short getMinute();
-    short getSecond();
+    unsigned short getHour();
+    unsigned short getMinute();
+    unsigned short getSecond();
     
     // Setter
     void setTime(unsigned short hour, unsigned short minute, unsigned short second);

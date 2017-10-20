@@ -25,13 +25,13 @@ TDate::TDate() {
 }
 
 // Getter
-short TDate::getDay() {
+unsigned short TDate::getDay() {
     return Day;
 }
-short TDate::getMonth() {
+unsigned short TDate::getMonth() {
     return Month;
 }
-short TDate::getYear() {
+unsigned short TDate::getYear() {
     return Year;
 }
 
