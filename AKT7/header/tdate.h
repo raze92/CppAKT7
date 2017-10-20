@@ -27,6 +27,7 @@ public:
     
     // Setter
     void setDate(unsigned short day, unsigned short month, unsigned short year);
+    void setDate();
     void setDay(unsigned short day);
     void setMonth(unsigned short month);
     void setYear(unsigned short year);

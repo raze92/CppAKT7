@@ -23,14 +23,22 @@ TTime::TTime(unsigned short hour, unsigned short minute, unsigned short second) 
 }
 
 TTime::TTime() {
-    time_t t = time(0);
-    struct tm * now = localtime(&t);
-    this->Hour = now->tm_hour;
-    this->Minute = now->tm_min;
-    this->Second = now->tm_sec;
+    setTime();
 }
 
 // Getter
+short TTime::getHour() {
+    return this->Hour;
+}
+short TTime::getMinute() {
+    return this->Minute;
+}
+short TTime::getSecond() {
+    return this->Second;
+}
+
+
+// Setter
 void TTime::setTime(unsigned short hour,unsigned short minute,unsigned short second) {
     if(hour > 23)
         throw std::invalid_argument("Invalid hour value");
@@ -42,6 +50,14 @@ void TTime::setTime(unsigned short hour,unsigned short minute,unsigned short sec
     this->Hour = hour;
     this->Minute = minute;
     this->Second = second;
+}
+
+void TTime::setTime() {
+    time_t t = time(0);
+    struct tm * now = localtime(&t);
+    this->Hour = now->tm_hour;
+    this->Minute = now->tm_min;
+    this->Second = now->tm_sec;
 }
 
 void TTime::setHour(unsigned short hour) {
@@ -61,17 +77,6 @@ void TTime::setSecond(unsigned short second) {
     if(second > 59)
         throw std::invalid_argument("Invalid second value");
     Second = second;
-}
-
-// Setter
-short TTime::getHour() {
-    return this->Hour;
-}
-short TTime::getMinute() {
-    return this->Minute;
-}
-short TTime::getSecond() {
-    return this->Second;
 }
 
 // Print

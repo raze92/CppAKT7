@@ -30,6 +30,7 @@ public:
     
     // Setter
     void setTime(unsigned short hour, unsigned short minute, unsigned short second);
+    void setTime();
     void setHour(unsigned short hour);
     void setMinute(unsigned short minute);
     void setSecond(unsigned short second);

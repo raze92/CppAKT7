@@ -21,11 +21,7 @@ TDate::TDate(unsigned short day, unsigned short month, unsigned short year) {
 }
 
 TDate::TDate() {
-    time_t t = time(0);
-    struct tm * now = localtime(&t);
-    this->Day = now->tm_mday;
-    this->Month = now->tm_mon + 1;
-    this->Year = now->tm_year + 1900;
+    setDate();
 }
 
 // Getter
@@ -49,6 +45,14 @@ void TDate::setDate(unsigned short day, unsigned short month, unsigned short yea
     this->Day = day;
     this->Month = month;
     this->Year = year;
+}
+
+void TDate::setDate() {
+    time_t t = time(0);
+    struct tm * now = localtime(&t);
+    this->Day = now->tm_mday;
+    this->Month = now->tm_mon + 1;
+    this->Year = now->tm_year + 1900;
 }
 
 void TDate::setDay(unsigned short day) {if(day > 31)
