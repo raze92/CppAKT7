@@ -79,5 +79,5 @@ void TDate::setYear(unsigned short year) {
 void TDate::print() {
     cout << setfill('0') << setw(2) << Day << '.';
     cout << setfill('0') << setw(2) << Month << '.';
-    cout << setfill('0') << setw(2) << Year;
+    cout << Year;
 }
