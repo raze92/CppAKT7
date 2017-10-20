@@ -25,15 +25,11 @@ TTime TBlock::getBegin() {
 }
 
 TTime TBlock::getEnd() {
-    unsigned short endHour = Begin.getHour() + 1;
-    unsigned short endMinute = Begin.getMinute() + 30;
-    if (endHour > 23) {
-        endHour = 0;
-    }
-    if (endMinute > 59) {
-        endMinute %= 60;
-        endHour += 1;
-    }
+    unsigned short endHour = Begin.getHour();
+    unsigned short endMinute = Begin.getMinute() + 90;
+    endHour += endMinute / 60;
+    endMinute %= 60;
+    endHour %= 24;
     return TTime(endHour, endMinute);
 }
 
