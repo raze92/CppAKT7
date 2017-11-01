@@ -9,9 +9,6 @@
 #ifndef tblock_h
 #define tblock_h
 
-
-#endif /* tblock_h */
-
 #include <string>
 #include <iostream>
 #include "ttime.h"
@@ -38,3 +35,5 @@ private:
     unsigned short BlockNr;
     TTime Begin;
 };
+
+#endif /* tblock_h */
