@@ -2,9 +2,10 @@
 //  main.cpp
 //  AKT7
 //
-//  Created by Michael Radzieda on 07.10.17.
+//  Created by Michael Radzieda on 09.11.17.
 //  Copyright © 2017 de.TeamBox. All rights reserved.
 //
+
 #include <iostream>
 
 using namespace std;
@@ -15,7 +16,6 @@ using namespace std;
 #include "tperson.h"
 #include "tevent.h"
 #include "tevents.h"
-#include "tweekday.h"
 
 int main()
 {
@@ -51,7 +51,7 @@ int main()
     TPerson Dozent3( "Sabine Sauber ", "Saubere Gasse", "1",   17001, "Auf dem Land",     3,  1, 1962);
     TPerson Dozent4( "Willi Witzig  ", "Wunderweg",     "99",  15911, "Nauen",            9, 11, 1976);
     
-    // Veranstaltungen 
+    // Veranstaltungen
     TEvent Event1("SU Informatik I     ", &Dozent1, &D117, &Block2, Fr, 1);
     TEvent Event2("Ueb Informatik I    ", &Dozent1, &D114, &Block3, Fr, 2);
     TEvent Event3("Ueb Informatik I    ", &Dozent1, &D114, &Block4, Fr, 2);
@@ -77,4 +77,3 @@ int main()
     
     return 0;
 }
-

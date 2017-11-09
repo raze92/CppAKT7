@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		860B33ED1F8917A5002AECAB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 860B33EC1F8917A5002AECAB /* main.cpp */; };
 		860B33F91F891DCB002AECAB /* tdate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 860B33F81F891DCB002AECAB /* tdate.cpp */; };
 		860B33FB1F891DFD002AECAB /* ttime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 860B33FA1F891DFD002AECAB /* ttime.cpp */; };
 		868A132D1FAA41D50015B995 /* tevent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 868A132C1FAA41D50015B995 /* tevent.cpp */; };
 		868A13301FAA48500015B995 /* tevents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 868A132F1FAA48500015B995 /* tevents.cpp */; };
+		86955A3B1FB5005C00BAC6EF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86955A3A1FB5005C00BAC6EF /* main.cpp */; };
 		86B16E1B1F97C04400BA6C2A /* taddress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86B16E1A1F97C04400BA6C2A /* taddress.cpp */; };
 		86B16E1E1F97C47200BA6C2A /* tperson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86B16E1D1F97C47200BA6C2A /* tperson.cpp */; };
 		86B1AD561F910A2A0050040C /* troom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86B1AD551F910A2A0050040C /* troom.cpp */; };
@@ -32,7 +32,6 @@
 
 /* Begin PBXFileReference section */
 		860B33E91F8917A5002AECAB /* AKT7 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AKT7; sourceTree = BUILT_PRODUCTS_DIR; };
-		860B33EC1F8917A5002AECAB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		860B33F51F89196A002AECAB /* tdate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tdate.h; sourceTree = "<group>"; };
 		860B33F61F891B5D002AECAB /* ttime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ttime.h; sourceTree = "<group>"; };
 		860B33F81F891DCB002AECAB /* tdate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tdate.cpp; sourceTree = "<group>"; };
@@ -42,6 +41,7 @@
 		868A132C1FAA41D50015B995 /* tevent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tevent.cpp; sourceTree = "<group>"; };
 		868A132E1FAA46ED0015B995 /* tevents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tevents.h; sourceTree = "<group>"; };
 		868A132F1FAA48500015B995 /* tevents.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tevents.cpp; sourceTree = "<group>"; };
+		86955A3A1FB5005C00BAC6EF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		86B16E191F97C00C00BA6C2A /* taddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = taddress.h; sourceTree = "<group>"; };
 		86B16E1A1F97C04400BA6C2A /* taddress.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = taddress.cpp; sourceTree = "<group>"; };
 		86B16E1C1F97C43100BA6C2A /* tperson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tperson.h; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 			children = (
 				860B33F71F891D5A002AECAB /* sources */,
 				860B33F31F89186C002AECAB /* header */,
-				860B33EC1F8917A5002AECAB /* main.cpp */,
+				86955A3A1FB5005C00BAC6EF /* main.cpp */,
 			);
 			path = AKT7;
 			sourceTree = "<group>";
@@ -179,9 +179,9 @@
 			files = (
 				860B33F91F891DCB002AECAB /* tdate.cpp in Sources */,
 				868A132D1FAA41D50015B995 /* tevent.cpp in Sources */,
+				86955A3B1FB5005C00BAC6EF /* main.cpp in Sources */,
 				86B16E1B1F97C04400BA6C2A /* taddress.cpp in Sources */,
 				86B16E1E1F97C47200BA6C2A /* tperson.cpp in Sources */,
-				860B33ED1F8917A5002AECAB /* main.cpp in Sources */,
 				868A13301FAA48500015B995 /* tevents.cpp in Sources */,
 				860B33FB1F891DFD002AECAB /* ttime.cpp in Sources */,
 				86B1AD591F910EE60050040C /* tblock.cpp in Sources */,

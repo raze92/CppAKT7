@@ -15,34 +15,7 @@ TEvent::TEvent(string name, TPerson* teacher, TRoom* room, TBlock* block, TWeekd
 }
 
 void TEvent::print() {
-    string weekdayStr;
-    switch (Weekday) {
-        case Mo:
-            weekdayStr = "Montag";
-            break;
-        case Di:
-            weekdayStr = "Dienstag";
-            break;
-        case Mi:
-            weekdayStr = "Mittwoch";
-            break;
-        case Do:
-            weekdayStr = "Donnerstag";
-            break;
-        case Fr:
-            weekdayStr = "Freitag";
-            break;
-        case Sa:
-            weekdayStr = "Samstag";
-            break;
-        case So:
-            weekdayStr = "Sonntag";
-            break;
-        default:
-            weekdayStr = "???";
-            break;
-    }
-    cout << weekdayStr << "\t\t";
+    cout << WEEKDAY[Weekday] << "\t\t";
     Block->print();
     cout << "\t\t" << Name << "\t" << Teacher->getName() << "\t" << Room->getName();
 }
