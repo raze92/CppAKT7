@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		860B33F91F891DCB002AECAB /* tdate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 860B33F81F891DCB002AECAB /* tdate.cpp */; };
 		860B33FB1F891DFD002AECAB /* ttime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 860B33FA1F891DFD002AECAB /* ttime.cpp */; };
+		8632C26B1FC8546700D6696A /* tstudent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8632C26A1FC8546700D6696A /* tstudent.cpp */; };
+		8632C2701FC8565700D6696A /* tstudy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8632C26F1FC8565700D6696A /* tstudy.cpp */; };
+		8632C2731FC85D5C00D6696A /* tteacher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8632C2721FC85D5C00D6696A /* tteacher.cpp */; };
 		868A132D1FAA41D50015B995 /* tevent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 868A132C1FAA41D50015B995 /* tevent.cpp */; };
 		868A13301FAA48500015B995 /* tevents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 868A132F1FAA48500015B995 /* tevents.cpp */; };
 		86955A3B1FB5005C00BAC6EF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86955A3A1FB5005C00BAC6EF /* main.cpp */; };
@@ -36,6 +39,12 @@
 		860B33F61F891B5D002AECAB /* ttime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ttime.h; sourceTree = "<group>"; };
 		860B33F81F891DCB002AECAB /* tdate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tdate.cpp; sourceTree = "<group>"; };
 		860B33FA1F891DFD002AECAB /* ttime.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ttime.cpp; sourceTree = "<group>"; };
+		8632C2691FC8544C00D6696A /* tstudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tstudent.h; sourceTree = "<group>"; };
+		8632C26A1FC8546700D6696A /* tstudent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tstudent.cpp; sourceTree = "<group>"; };
+		8632C26E1FC8564600D6696A /* tstudy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tstudy.h; sourceTree = "<group>"; };
+		8632C26F1FC8565700D6696A /* tstudy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tstudy.cpp; sourceTree = "<group>"; };
+		8632C2711FC85D4A00D6696A /* tteacher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tteacher.h; sourceTree = "<group>"; };
+		8632C2721FC85D5C00D6696A /* tteacher.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tteacher.cpp; sourceTree = "<group>"; };
 		868A132A1FAA39340015B995 /* tevent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tevent.h; sourceTree = "<group>"; };
 		868A132B1FAA3A420015B995 /* tweekday.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tweekday.h; sourceTree = "<group>"; };
 		868A132C1FAA41D50015B995 /* tevent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tevent.cpp; sourceTree = "<group>"; };
@@ -101,6 +110,9 @@
 				868A132A1FAA39340015B995 /* tevent.h */,
 				868A132B1FAA3A420015B995 /* tweekday.h */,
 				868A132E1FAA46ED0015B995 /* tevents.h */,
+				8632C2691FC8544C00D6696A /* tstudent.h */,
+				8632C26E1FC8564600D6696A /* tstudy.h */,
+				8632C2711FC85D4A00D6696A /* tteacher.h */,
 			);
 			path = header;
 			sourceTree = "<group>";
@@ -116,6 +128,9 @@
 				86B16E1D1F97C47200BA6C2A /* tperson.cpp */,
 				868A132C1FAA41D50015B995 /* tevent.cpp */,
 				868A132F1FAA48500015B995 /* tevents.cpp */,
+				8632C26A1FC8546700D6696A /* tstudent.cpp */,
+				8632C26F1FC8565700D6696A /* tstudy.cpp */,
+				8632C2721FC85D5C00D6696A /* tteacher.cpp */,
 			);
 			path = sources;
 			sourceTree = "<group>";
@@ -181,8 +196,11 @@
 				868A132D1FAA41D50015B995 /* tevent.cpp in Sources */,
 				86955A3B1FB5005C00BAC6EF /* main.cpp in Sources */,
 				86B16E1B1F97C04400BA6C2A /* taddress.cpp in Sources */,
+				8632C2701FC8565700D6696A /* tstudy.cpp in Sources */,
+				8632C2731FC85D5C00D6696A /* tteacher.cpp in Sources */,
 				86B16E1E1F97C47200BA6C2A /* tperson.cpp in Sources */,
 				868A13301FAA48500015B995 /* tevents.cpp in Sources */,
+				8632C26B1FC8546700D6696A /* tstudent.cpp in Sources */,
 				860B33FB1F891DFD002AECAB /* ttime.cpp in Sources */,
 				86B1AD591F910EE60050040C /* tblock.cpp in Sources */,
 				86B1AD561F910A2A0050040C /* troom.cpp in Sources */,

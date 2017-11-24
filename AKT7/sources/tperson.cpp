@@ -11,11 +11,16 @@
 using namespace std;
 
 // Constructor
-TPerson::TPerson(string name,
-                 string street, string houseNr, unsigned zipcode, string city,
+TPerson::TPerson(string name, string street, string houseNr, unsigned zipcode, string city,
                  unsigned short day, unsigned short month, unsigned short year)
-                    : Address(street, houseNr, zipcode, city), Birthday(day, month, year) {
+: Address(street, houseNr, zipcode, city), Birthday(day, month, year) {
     this->Name = name;
+    this->ID = ++IdIterator;
+}
+
+TPerson::TPerson(TPerson* person) : Address(this->getAddress()), Birthday(this->getBirthday()){
+    this->Name = person->getName();
+    this->ID = ++IdIterator;
 }
 
 // Getter
@@ -30,14 +35,6 @@ TAddress& TPerson::getAddress() {
 }
 TDate TPerson::getBirthday() {
     return Birthday;
-}
-
-// Setter
-void TPerson::setID(unsigned iD) {
-    this->ID = iD;
-}
-void TPerson::setName(string name) {
-    this->Name = name;
 }
 
 // Print

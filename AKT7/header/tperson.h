@@ -16,12 +16,15 @@
 
 using namespace std;
 
+static unsigned IdIterator = 0;
+
 class TPerson {
 public:
     // Constructor
-    TPerson(string name,
-            string street, string houseNr, unsigned zipcode, string city,
+    TPerson(string name, string street, string houseNr, unsigned zipcode, string city,
             unsigned short day, unsigned short month, unsigned short year);
+    TPerson(TPerson* person);
+    
     
     // Getter
     unsigned getID();
@@ -29,14 +32,10 @@ public:
     TAddress& getAddress();
     TDate getBirthday();
     
-    // Setter
-    void setID(unsigned iD);
-    void setName(string name);
-    
     // Print
     void print();
     
-private:
+protected:
     unsigned ID;
     string Name;
     TAddress Address;
