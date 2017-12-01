@@ -11,11 +11,23 @@
 
 #include <string>
 #include <iostream>
+#include <fstream>
 
-using namespace std;
+#include "XmlUtils.h"
 
 class TStudy {
+public:
+    // Constructor
+    TStudy();
     TStudy(string name, bool nc, short NrOfTerms);
+    
+    // Getter
+    string getName();
+    
+    // Load
+    void load(ifstream* dataStream);
+    
+    // Print
     void print();
 private:
     string Name;

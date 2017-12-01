@@ -11,6 +11,10 @@
 using namespace std;
 
 // Constructor
+TTime::TTime() {
+    setTime();
+}
+
 TTime::TTime(unsigned short hour, unsigned short minute, unsigned short second) {
     if(hour > 23)
         throw invalid_argument("Invalid hour value");
@@ -22,10 +26,6 @@ TTime::TTime(unsigned short hour, unsigned short minute, unsigned short second) 
     this->Hour = hour;
     this->Minute = minute;
     this->Second = second;
-}
-
-TTime::TTime() {
-    setTime();
 }
 
 // Getter
@@ -79,6 +79,45 @@ void TTime::setSecond(unsigned short second) {
     if(second > 59)
         throw invalid_argument("Invalid second value");
     Second = second;
+}
+
+// Load
+void TTime::load(ifstream* dataStream, string closingTag) {
+    bool hourSet = false;
+    bool minuteSet = false;
+    bool secondSet = false;
+    
+    while(!dataStream->eof()) {
+        string tag = XmlUtils::getNextXmlTag(dataStream);
+        if(tag == closingTag) {
+            if(!hourSet) {
+                this->Hour = 0;
+            }
+            if(!minuteSet) {
+                this->Minute = 0;
+            }
+            if(!secondSet) {
+                this->Second = 0;
+            }
+            return;
+            
+        } else if(tag == "hour") {
+            string hour = XmlUtils::getContentUntilCloseTag(dataStream, "/hour");
+            this->Hour = stoi(hour);
+            hourSet = true;
+            
+        } else if(tag == "minute") {
+            string month = XmlUtils::getContentUntilCloseTag(dataStream, "/minute");
+            this->Minute = stoi(month);
+            minuteSet = true;
+            
+        } else if(tag == "second") {
+            string second = XmlUtils::getContentUntilCloseTag(dataStream, "/second");
+            this->Second = stoi(second);
+            secondSet = true;
+            
+        }
+    }
 }
 
 // Print

@@ -35,6 +35,8 @@ const string WEEKDAY[] = {
     "Sonntag"
 };
 
+TWeekday getWeekday(string weekday);
+
 
 
 #endif /* tweekday_h */

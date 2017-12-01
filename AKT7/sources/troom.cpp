@@ -11,6 +11,10 @@
 using namespace std;
 
 // Constructor
+TRoom::TRoom() {
+    
+}
+
 TRoom::TRoom(string name, string building, unsigned short seats) {
     this->Name = name;
     this->Building = building;
@@ -41,6 +45,28 @@ void TRoom::setBuilding(string building) {
 
 void TRoom::setSeats(unsigned short seats) {
     this->Seats = seats;
+}
+
+// Load
+void TRoom::load(ifstream* dataStream) {
+    while(!dataStream->eof()) {
+        string tag = XmlUtils::getNextXmlTag(dataStream);
+        if(tag == "/room") {
+            return;
+            
+        } else if(tag == "name") {
+            string name = XmlUtils::getContentUntilCloseTag(dataStream, "/name");
+            this->Name = name;
+            
+        } else if(tag == "building") {
+            string building = XmlUtils::getContentUntilCloseTag(dataStream, "/building");
+            this->Building = building;
+            
+        } else if(tag == "seats") {
+            string seats = XmlUtils::getContentUntilCloseTag(dataStream, "/seats");
+            this->Seats = stoi(seats);
+        }
+    }
 }
 
 // Print

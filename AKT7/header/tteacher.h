@@ -9,14 +9,26 @@
 #ifndef tteacher_h
 #define tteacher_h
 
-#include "tperson.h"
 #include <iostream>
+#include <fstream>
 
-using namespace std;
+#include "tperson.h"
+#include "tbooking.h"
+#include "XmlUtils.h"
 
-class TTeacher : TPerson {
+class TTeacher : public TPerson {
 public:
+    // Constructor
+    TTeacher();
     TTeacher(int personalNr, TPerson* person);
+    
+    // Getter
+    int getPersonalNr();
+    
+    // Load
+    void load(ifstream* dataStream);
+    
+    // Print
     void print();
 private:
     int PersonalNr;

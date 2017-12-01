@@ -11,6 +11,8 @@
 using namespace std;
 
 // Constructor
+TPerson::TPerson() : Address() { }
+
 TPerson::TPerson(string name, string street, string houseNr, unsigned zipcode, string city,
                  unsigned short day, unsigned short month, unsigned short year)
 : Address(street, houseNr, zipcode, city), Birthday(day, month, year) {
@@ -43,3 +45,5 @@ void TPerson::print() {
     Birthday.print();
     cout << ")";
 }
+
+unsigned TPerson::IdIterator = 0;

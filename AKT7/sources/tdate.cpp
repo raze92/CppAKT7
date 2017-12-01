@@ -11,6 +11,10 @@
 using namespace std;
 
 // Constructor
+TDate::TDate() {
+    setDate();
+}
+
 TDate::TDate(unsigned short day, unsigned short month, unsigned short year) {
     if(day > 31)
         throw invalid_argument("Invalid day value");
@@ -20,10 +24,6 @@ TDate::TDate(unsigned short day, unsigned short month, unsigned short year) {
     this->Day = day;
     this->Month = month;
     this->Year = year;
-}
-
-TDate::TDate() {
-    setDate();
 }
 
 // Getter
@@ -73,6 +73,25 @@ void TDate::setMonth(unsigned short month) {
 
 void TDate::setYear(unsigned short year) {
     this->Year = year;
+}
+
+// Load
+void TDate::load(ifstream* dataStream, string closingTag) {
+    while(!dataStream->eof()) {
+        string tag = XmlUtils::getNextXmlTag(dataStream);
+        if(tag == closingTag) {
+            return;
+        } else if(tag == "day") {
+            string day = XmlUtils::getContentUntilCloseTag(dataStream, "/day");
+            this->Day = stoi(day);
+        } else if(tag == "month") {
+            string month = XmlUtils::getContentUntilCloseTag(dataStream, "/month");
+            this->Month = stoi(month);
+        } else if(tag == "year") {
+            string year = XmlUtils::getContentUntilCloseTag(dataStream, "/year");
+            this->Year = stoi(year);
+        }
+    }
 }
 
 // Print

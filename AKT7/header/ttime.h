@@ -15,14 +15,15 @@
 #include <iomanip>
 #include <iostream>
 #include <stdexcept>
+#include <fstream>
 
-using namespace std;
+#include "XmlUtils.h"
 
 class TTime {
 public:
     // Constructor
-    TTime(unsigned short hour, unsigned short minute, unsigned short second = 0);
     TTime();
+    TTime(unsigned short hour, unsigned short minute, unsigned short second = 0);
     
     // Getter
     unsigned short getHour();
@@ -35,6 +36,9 @@ public:
     void setHour(unsigned short hour);
     void setMinute(unsigned short minute);
     void setSecond(unsigned short second);
+    
+    // Load
+    void load(ifstream* dataStream, string closingTag);
     
     // Print
     void print();

@@ -7,6 +7,12 @@
 //
 
 #include "tstudent.h"
+#include "tbookings.h"
+
+using namespace std;
+
+// Constructor
+TStudent::TStudent() : TPerson() { }
 
 TStudent::TStudent(int matriculationNr, unsigned short term, short credits, TStudy* study, TPerson* person)
 : TPerson(person) {
@@ -16,8 +22,46 @@ TStudent::TStudent(int matriculationNr, unsigned short term, short credits, TStu
     this->Study = study;
 }
 
+// Getter
+int TStudent::getMatriculationNr() {
+    return MatriculationNr;
+}
+
+// Load
+void TStudent::load(ifstream* dataStream, TBookings* bookings) {
+    while(!dataStream->eof()) {
+        string tag = XmlUtils::getNextXmlTag(dataStream);
+        if(tag == "/student") {
+            return;
+            
+        } else if(tag == "name") {
+            string name = XmlUtils::getContentUntilCloseTag(dataStream, "/name");
+            this->Name = name;
+            
+        } else if(tag == "address") {
+            this->Address.load(dataStream);
+            
+        } else if(tag == "birthday") {
+            this->Birthday.load(dataStream, "/birthday");
+            
+        } else if(tag == "matriculationnr") {
+            string matriculationnr = XmlUtils::getContentUntilCloseTag(dataStream, "/matriculationnr");
+            this->MatriculationNr = stoi(matriculationnr);
+            
+        } else if(tag == "credits") {
+            string credits = XmlUtils::getContentUntilCloseTag(dataStream, "/credits");
+            this->Credits = stoi(credits);
+            
+        } else if(tag == "study") {
+            string study = XmlUtils::getContentUntilCloseTag(dataStream, "/study");
+            this->Study = bookings->findStudy(study);
+        }
+    }
+}
+
+// Print
 void TStudent::print() {
-    cout << TPerson::Name << "(";
+    cout << TPerson::Name << "(* ";
     TPerson::Birthday.print();
-    cout <<  ", " << this->MatriculationNr << ")";
+    cout <<  "; MatrNr. " << this->MatriculationNr << ")";
 }

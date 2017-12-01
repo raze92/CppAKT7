@@ -11,12 +11,14 @@
 
 #include <string>
 #include <iostream>
+#include <fstream>
 
-using namespace std;
+#include "XmlUtils.h"
 
 class TAddress {
 public:
     // Constructor
+    TAddress();
     TAddress(string street, string houseNr, unsigned zipcode, string city);
     
     // Getter
@@ -30,6 +32,9 @@ public:
     void setHouseNr(string houseNr);
     void setZipcode(unsigned zipcode);
     void setCity(string city);
+    
+    // Load
+    void load(ifstream* dataStream);
     
     // Print
     void print();

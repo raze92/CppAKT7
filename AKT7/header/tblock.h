@@ -11,13 +11,15 @@
 
 #include <string>
 #include <iostream>
-#include "ttime.h"
+#include <fstream>
 
-using namespace std;
+#include "ttime.h"
+#include "XmlUtils.h"
 
 class TBlock {
 public:
     // Constructor
+    TBlock();
     TBlock(short blockNr, TTime begin);
 
     // Getter
@@ -28,6 +30,9 @@ public:
     // Setter
     void setBlockNr(unsigned short blockNr);
     void setBegin(TTime begin);
+    
+    // Load
+    void load(ifstream* dataStream);
     
     // Print
     void print();

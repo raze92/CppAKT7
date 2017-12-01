@@ -10,16 +10,27 @@
 #define tevent_h
 
 #include <string>
+#include <fstream>
+#include <iostream>
+
 #include "tperson.h"
 #include "troom.h"
 #include "tblock.h"
 #include "tweekday.h"
+//#include "tbookings.h"
 
-using namespace std;
+class TBookings;
 
 class TEvent {
 public:
+    // Constructor
+    TEvent();
     TEvent(string name, TPerson* teacher, TRoom* room, TBlock* block, TWeekday weekday, short period);
+    
+    // Load
+    void load(ifstream* dataStream, TBookings* bookings);
+    
+    // Print
     void print();
     
 private:

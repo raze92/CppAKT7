@@ -13,14 +13,15 @@
 #include <string>
 #include <iomanip>
 #include <iostream>
+#include <fstream>
 
-using namespace std;
+#include "XmlUtils.h"
 
 class TDate {
 public:
     // Constructor
-    TDate(unsigned short day, unsigned short month, unsigned short year);
     TDate();
+    TDate(unsigned short day, unsigned short month, unsigned short year);
     
     // Getter
     unsigned short getDay();
@@ -33,6 +34,9 @@ public:
     void setDay(unsigned short day);
     void setMonth(unsigned short month);
     void setYear(unsigned short year);
+    
+    // Load
+    void load(ifstream* dataStream, string closingTag);
     
     // Print
     void print();

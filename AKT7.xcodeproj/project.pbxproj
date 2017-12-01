@@ -12,6 +12,9 @@
 		8632C26B1FC8546700D6696A /* tstudent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8632C26A1FC8546700D6696A /* tstudent.cpp */; };
 		8632C2701FC8565700D6696A /* tstudy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8632C26F1FC8565700D6696A /* tstudy.cpp */; };
 		8632C2731FC85D5C00D6696A /* tteacher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8632C2721FC85D5C00D6696A /* tteacher.cpp */; };
+		8632C2761FC86F0F00D6696A /* tsubject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8632C2751FC86F0F00D6696A /* tsubject.cpp */; };
+		868828F31FD1A8EE00FBF820 /* XmlUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 868828F21FD1A8EE00FBF820 /* XmlUtils.cpp */; };
+		868828F51FD1AA0200FBF820 /* tweekday.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 868828F41FD1AA0200FBF820 /* tweekday.cpp */; };
 		868A132D1FAA41D50015B995 /* tevent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 868A132C1FAA41D50015B995 /* tevent.cpp */; };
 		868A13301FAA48500015B995 /* tevents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 868A132F1FAA48500015B995 /* tevents.cpp */; };
 		86955A3B1FB5005C00BAC6EF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86955A3A1FB5005C00BAC6EF /* main.cpp */; };
@@ -19,6 +22,8 @@
 		86B16E1E1F97C47200BA6C2A /* tperson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86B16E1D1F97C47200BA6C2A /* tperson.cpp */; };
 		86B1AD561F910A2A0050040C /* troom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86B1AD551F910A2A0050040C /* troom.cpp */; };
 		86B1AD591F910EE60050040C /* tblock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86B1AD581F910EE60050040C /* tblock.cpp */; };
+		86CF79D31FD00EE800442605 /* tbooking.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86CF79D21FD00EE800442605 /* tbooking.cpp */; };
+		86CF79D71FD0189400442605 /* tbookings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86CF79D61FD0189400442605 /* tbookings.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +50,10 @@
 		8632C26F1FC8565700D6696A /* tstudy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tstudy.cpp; sourceTree = "<group>"; };
 		8632C2711FC85D4A00D6696A /* tteacher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tteacher.h; sourceTree = "<group>"; };
 		8632C2721FC85D5C00D6696A /* tteacher.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tteacher.cpp; sourceTree = "<group>"; };
+		8632C2741FC86EFB00D6696A /* tsubject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tsubject.h; sourceTree = "<group>"; };
+		8632C2751FC86F0F00D6696A /* tsubject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tsubject.cpp; sourceTree = "<group>"; };
+		868828F21FD1A8EE00FBF820 /* XmlUtils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = XmlUtils.cpp; sourceTree = "<group>"; };
+		868828F41FD1AA0200FBF820 /* tweekday.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tweekday.cpp; sourceTree = "<group>"; };
 		868A132A1FAA39340015B995 /* tevent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tevent.h; sourceTree = "<group>"; };
 		868A132B1FAA3A420015B995 /* tweekday.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tweekday.h; sourceTree = "<group>"; };
 		868A132C1FAA41D50015B995 /* tevent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tevent.cpp; sourceTree = "<group>"; };
@@ -59,6 +68,12 @@
 		86B1AD551F910A2A0050040C /* troom.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = troom.cpp; sourceTree = "<group>"; };
 		86B1AD571F910ED40050040C /* tblock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tblock.h; sourceTree = "<group>"; };
 		86B1AD581F910EE60050040C /* tblock.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tblock.cpp; sourceTree = "<group>"; };
+		86CF79D11FD00DF400442605 /* tbooking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tbooking.h; sourceTree = "<group>"; };
+		86CF79D21FD00EE800442605 /* tbooking.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tbooking.cpp; sourceTree = "<group>"; };
+		86CF79D41FD0165700442605 /* belegungen.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = belegungen.xml; sourceTree = "<group>"; };
+		86CF79D51FD0169100442605 /* tbookings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tbookings.h; sourceTree = "<group>"; };
+		86CF79D61FD0189400442605 /* tbookings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tbookings.cpp; sourceTree = "<group>"; };
+		86CF79D81FD02B6500442605 /* XmlUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XmlUtils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +106,7 @@
 		860B33EB1F8917A5002AECAB /* AKT7 */ = {
 			isa = PBXGroup;
 			children = (
+				86CF79D41FD0165700442605 /* belegungen.xml */,
 				860B33F71F891D5A002AECAB /* sources */,
 				860B33F31F89186C002AECAB /* header */,
 				86955A3A1FB5005C00BAC6EF /* main.cpp */,
@@ -113,6 +129,10 @@
 				8632C2691FC8544C00D6696A /* tstudent.h */,
 				8632C26E1FC8564600D6696A /* tstudy.h */,
 				8632C2711FC85D4A00D6696A /* tteacher.h */,
+				8632C2741FC86EFB00D6696A /* tsubject.h */,
+				86CF79D11FD00DF400442605 /* tbooking.h */,
+				86CF79D51FD0169100442605 /* tbookings.h */,
+				86CF79D81FD02B6500442605 /* XmlUtils.h */,
 			);
 			path = header;
 			sourceTree = "<group>";
@@ -131,6 +151,11 @@
 				8632C26A1FC8546700D6696A /* tstudent.cpp */,
 				8632C26F1FC8565700D6696A /* tstudy.cpp */,
 				8632C2721FC85D5C00D6696A /* tteacher.cpp */,
+				8632C2751FC86F0F00D6696A /* tsubject.cpp */,
+				86CF79D21FD00EE800442605 /* tbooking.cpp */,
+				86CF79D61FD0189400442605 /* tbookings.cpp */,
+				868828F21FD1A8EE00FBF820 /* XmlUtils.cpp */,
+				868828F41FD1AA0200FBF820 /* tweekday.cpp */,
 			);
 			path = sources;
 			sourceTree = "<group>";
@@ -194,6 +219,7 @@
 			files = (
 				860B33F91F891DCB002AECAB /* tdate.cpp in Sources */,
 				868A132D1FAA41D50015B995 /* tevent.cpp in Sources */,
+				86CF79D71FD0189400442605 /* tbookings.cpp in Sources */,
 				86955A3B1FB5005C00BAC6EF /* main.cpp in Sources */,
 				86B16E1B1F97C04400BA6C2A /* taddress.cpp in Sources */,
 				8632C2701FC8565700D6696A /* tstudy.cpp in Sources */,
@@ -201,9 +227,13 @@
 				86B16E1E1F97C47200BA6C2A /* tperson.cpp in Sources */,
 				868A13301FAA48500015B995 /* tevents.cpp in Sources */,
 				8632C26B1FC8546700D6696A /* tstudent.cpp in Sources */,
+				868828F51FD1AA0200FBF820 /* tweekday.cpp in Sources */,
+				8632C2761FC86F0F00D6696A /* tsubject.cpp in Sources */,
 				860B33FB1F891DFD002AECAB /* ttime.cpp in Sources */,
 				86B1AD591F910EE60050040C /* tblock.cpp in Sources */,
+				86CF79D31FD00EE800442605 /* tbooking.cpp in Sources */,
 				86B1AD561F910A2A0050040C /* troom.cpp in Sources */,
+				868828F31FD1A8EE00FBF820 /* XmlUtils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

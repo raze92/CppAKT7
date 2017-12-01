@@ -9,16 +9,30 @@
 #ifndef tstudent_h
 #define tstudent_h
 
+#include <iostream>
+#include <string>
+#include <fstream>
+
 #include "tperson.h"
 #include "tstudy.h"
-#include <iostream>
+//#include "tbookings.h"
+#include "XmlUtils.h"
 
-using namespace std;
+class TBookings;
 
-class TStudent : TPerson {
+class TStudent : public TPerson {
 public:
+    // Constructor
+    TStudent();
     TStudent(int matriculationNr, unsigned short term, short credits, TStudy* study, TPerson* person);
     
+    // Getter
+    int getMatriculationNr();
+    
+    // Load
+    void load(ifstream* dataStream, TBookings* bookings);
+    
+    // Print
     void print();
 private:
     int MatriculationNr;

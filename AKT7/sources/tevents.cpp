@@ -11,14 +11,14 @@
 using namespace std;
 
 void TEvents::addEvent(TEvent* event) {
-    Events->push_back(event);
+    Events.push_back(event);
 }
 
 void TEvents::print() {
     cout << "Veranstaltungen:" << endl;
-    for(int i = 0; i < Events->size(); i++) {
+    for(int i = 0; i < Events.size(); i++) {
         cout << i + 1 << ": ";
-        (*Events)[i]->print();
+        Events[i]->print();
         cout << endl;
     }
 }

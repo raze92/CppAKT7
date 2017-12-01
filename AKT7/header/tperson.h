@@ -14,13 +14,10 @@
 #include "taddress.h"
 #include "tdate.h"
 
-using namespace std;
-
-static unsigned IdIterator = 0;
-
 class TPerson {
 public:
     // Constructor
+    TPerson();
     TPerson(string name, string street, string houseNr, unsigned zipcode, string city,
             unsigned short day, unsigned short month, unsigned short year);
     TPerson(TPerson* person);
@@ -40,6 +37,9 @@ protected:
     string Name;
     TAddress Address;
     TDate Birthday;
+
+private:
+    static unsigned IdIterator;
 };
 
 #endif /* tperson_h */

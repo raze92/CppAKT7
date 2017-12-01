@@ -13,15 +13,13 @@
 #include <vector>
 #include "tevent.h"
 
-using namespace std;
-
 class TEvents {
 public:
     void addEvent(TEvent* event);
     void print();
     
 private:
-    vector<TEvent*>* Events = new vector<TEvent*>();
+    vector<TEvent*> Events;
 };
 
 #endif /* tevents_h */

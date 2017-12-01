@@ -11,12 +11,14 @@
 
 #include <string>
 #include <iostream>
+#include <fstream>
 
-using namespace std;
+#include "XmlUtils.h"
 
 class TRoom {
 public:
     // Constructor
+    TRoom();
     TRoom(string name, string building, unsigned short seats);
     
     // Getter
@@ -28,6 +30,9 @@ public:
     void setName(string name);
     void setBuilding(string building);
     void setSeats(unsigned short seats);
+    
+    // Load
+    void load(ifstream* dataStream);
     
     // Print
     void print();
