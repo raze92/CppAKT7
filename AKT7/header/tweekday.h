@@ -35,8 +35,17 @@ const string WEEKDAY[] = {
     "Sonntag"
 };
 
+const string WEEKDAY_SHORT[] = {
+    "No",
+    "Mo",
+    "Di",
+    "Mi",
+    "Do",
+    "Fr",
+    "Sa",
+    "So"
+};
+
 TWeekday getWeekday(string weekday);
-
-
 
 #endif /* tweekday_h */
