@@ -10,7 +10,7 @@
 
 TWeekday getWeekday(string weekday) {
     for(int i = 0; i < (sizeof(WEEKDAY)/sizeof(*WEEKDAY)); i++) {
-        if(WEEKDAY[i] == weekday) {
+        if((WEEKDAY[i] == weekday) || (WEEKDAY_SHORT[i] == weekday)) {
             return static_cast<TWeekday>(i);
         }
     }
