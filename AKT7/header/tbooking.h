@@ -13,6 +13,7 @@
 #include <fstream>
 
 #include "tsubject.h"
+#include "tperson.h"
 #include "tstudent.h"
 #include "tdate.h"
 #include "ttime.h"
@@ -33,7 +34,7 @@ public:
 private:
     int BookingNr;
     TSubject* Subject;
-    TStudent* Student;
+    TPerson* Student;
     TDate* BookingDate;
     TTime* BookingTime;
 };

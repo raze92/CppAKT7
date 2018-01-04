@@ -9,10 +9,17 @@
 #include "tteacher.h"
 
 // Constructor
-TTeacher::TTeacher() : TPerson() { }
+TTeacher::TTeacher() : TPerson() {
+    this->PersonalNr = 0;
+}
 
 TTeacher::TTeacher(int personalNr, TPerson* person) : TPerson(person) {
     this->PersonalNr = personalNr;
+}
+
+//Destructor
+TTeacher::~TTeacher() {
+    cout << "Dozent freigegeben: " << TPerson::Name;
 }
 
 // Getter
@@ -46,5 +53,5 @@ void TTeacher::load(ifstream* dataStream) {
 
 // Print
 void TTeacher::print() {
-    cout << TPerson::Name << "(" << this->PersonalNr << ")";
+    cout << TPerson::Name << " (PersNr. " << this->PersonalNr << ")";
 }

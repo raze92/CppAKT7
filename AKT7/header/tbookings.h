@@ -18,6 +18,7 @@
 #include "tstudy.h"
 #include "tstudent.h"
 #include "tteacher.h"
+#include "ttutor.h"
 #include "tsubject.h"
 #include "tbooking.h"
 #include "XmlUtils.h"
@@ -37,19 +38,18 @@ public:
     TBlock* findBlock(int blockNr);
     TRoom* findRoom(string name);
     TStudy* findStudy(string name);
-    TStudent* findStudent(string name);
-    TTeacher* findTeacher(string name);
+    TPerson* findPerson(string name);
     TSubject* findSubject(string name);
     
     // Print
-    void print();
+    void printBookings();
+    void printPersons();
     
 private:
     vector<TBlock*> Blocks;
     vector<TRoom*> Rooms;
     vector<TStudy*> Studies;
-    vector<TStudent*> Students;
-    vector<TTeacher*> Teachers;
+    vector<TPerson*> Persons;
     vector<TSubject*> Subjects;
     vector<TBooking*> Bookings;
 };

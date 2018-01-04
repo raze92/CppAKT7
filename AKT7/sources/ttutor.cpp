@@ -1,46 +1,30 @@
 //
-//  tstudent.cpp
+//  ttutor.cpp
 //  AKT7
 //
-//  Created by Michael Radzieda on 24.11.17.
+//  Created by Michael Radzieda on 28.12.17.
 //  Copyright © 2017 de.TeamBox. All rights reserved.
 //
 
-#include "tstudent.h"
-#include "tbookings.h"
+#include "ttutor.h"
 
 using namespace std;
 
 // Constructor
-TStudent::TStudent() : TPerson() {
-    this->MatriculationNr = 0;
-    this->Term = 0;
-    this->Credits = 0;
-}
-
-TStudent::TStudent(int matriculationNr, unsigned short term, short credits, TStudy* study, TPerson* person)
-: TPerson(person) {
-    this->MatriculationNr = matriculationNr;
-    this->Term = term;
-    this->Credits = credits;
-    this->Study = study;
+TTutor::TTutor() {
+    
 }
 
 // Destructor
-TStudent::~TStudent() {
-    cout << "Student freigegeben: " << TPerson::Name;
-}
-
-// Getter
-int TStudent::getMatriculationNr() {
-    return MatriculationNr;
+TTutor::~TTutor() {
+    cout << "Tutor freigegeben: " << TPerson::Name;
 }
 
 // Load
-void TStudent::load(ifstream* dataStream, TBookings* bookings) {
+void TTutor::load(ifstream *dataStream, TBookings* bookings) {
     while(!dataStream->eof()) {
         string tag = XmlUtils::getNextXmlTag(dataStream);
-        if(tag == "/student") {
+        if(tag == "/tutor") {
             return;
             
         } else if(tag == "name") {
@@ -57,6 +41,14 @@ void TStudent::load(ifstream* dataStream, TBookings* bookings) {
             string matriculationnr = XmlUtils::getContentUntilCloseTag(dataStream, "/matriculationnr");
             this->MatriculationNr = stoi(matriculationnr);
             
+        } else if(tag == "personalnr") {
+            string personalnr = XmlUtils::getContentUntilCloseTag(dataStream, "/personalnr");
+            this->PersonalNr = stoi(personalnr);
+            
+        } else if(tag == "nroftermsastutor") {
+            string nroftermsastutor = XmlUtils::getContentUntilCloseTag(dataStream, "/nroftermsastutor");
+            this->NrOfTemrsAsTutor = stoi(nroftermsastutor);
+            
         } else if(tag == "credits") {
             string credits = XmlUtils::getContentUntilCloseTag(dataStream, "/credits");
             this->Credits = stoi(credits);
@@ -64,13 +56,15 @@ void TStudent::load(ifstream* dataStream, TBookings* bookings) {
         } else if(tag == "study") {
             string study = XmlUtils::getContentUntilCloseTag(dataStream, "/study");
             this->Study = bookings->findStudy(study);
+            
         }
     }
 }
 
 // Print
-void TStudent::print() {
+void TTutor::print() {
     cout << TPerson::Name << "(* ";
     TPerson::Birthday.print();
-    cout <<  "; MatrNr. " << this->MatriculationNr << ")";
+    cout <<  "; MatrNr. " << TStudent::MatriculationNr;
+    cout <<  "; PersNr. " << TTeacher::PersonalNr << ")";
 }

@@ -20,21 +20,24 @@
 
 class TBookings;
 
-class TStudent : public TPerson {
+class TStudent : virtual public TPerson {
 public:
     // Constructor
     TStudent();
     TStudent(int matriculationNr, unsigned short term, short credits, TStudy* study, TPerson* person);
     
+    // Destructor
+    ~TStudent();
+    
     // Getter
     int getMatriculationNr();
     
     // Load
-    void load(ifstream* dataStream, TBookings* bookings);
+    virtual void load(ifstream* dataStream, TBookings* bookings);
     
     // Print
-    void print();
-private:
+    virtual void print();
+protected:
     int MatriculationNr;
     unsigned short Term;
     short Credits;

@@ -44,7 +44,7 @@ void TBooking::load(ifstream* dataStream, TBookings* bookings) {
             
         } else if(tag == "student") {
             string student = XmlUtils::getContentUntilCloseTag(dataStream, "/student");
-            this->Student = bookings->findStudent(student);
+            this->Student = bookings->findPerson(student);
             
         }  else if(tag == "bookingdate") {
             this->BookingDate = new TDate();

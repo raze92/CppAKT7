@@ -48,12 +48,17 @@ TBookings::TBookings(string filename) {
                 } else if(tag == "student") {
                     TStudent* student = new TStudent();
                     student->load(&inf, this);
-                    this->Students.push_back(student);
+                    this->Persons.push_back(student);
                     
                 } else if(tag == "teacher") {
                     TTeacher* teacher = new TTeacher();
                     teacher->load(&inf);
-                    this->Teachers.push_back(teacher);
+                    this->Persons.push_back(teacher);
+                    
+                } else if(tag == "tutor") {
+                    TTutor* tutor = new TTutor();
+                    tutor->load(&inf, this);
+                    this->Persons.push_back(tutor);
                     
                 } else if(tag == "subject") {
                     TSubject* subject = new TSubject();
@@ -91,15 +96,10 @@ TBookings::~TBookings() {
     }
     cout << "ok" << endl;
     
-    cout << "Studenten freigeben ... ";
-    for(auto *student : Students) {
-        delete student;
-    }
-    cout << "ok" << endl;
-    
-    cout << "Dozenten freigeben ... ";
-    for(auto *teacher : Teachers) {
-        delete teacher;
+    cout << "Personen freigeben ... ";
+    for(auto *person : Persons) {
+        delete person;
+        cout << endl;
     }
     cout << "ok" << endl;
     
@@ -144,19 +144,10 @@ TStudy* TBookings::findStudy(string name) {
     return NULL;
 }
 
-TStudent* TBookings::findStudent(string name)  {
-    for(auto *student : Students) {
-        if(student->getName() == name) {
-            return student;
-        }
-    }
-    return NULL;
-}
-
-TTeacher* TBookings::findTeacher(string name)  {
-    for(auto *teacher : Teachers) {
-        if(teacher->getName() == name) {
-            return teacher;
+TPerson* TBookings::findPerson(string name)  {
+    for(auto *person : Persons) {
+        if(person->getName() == name) {
+            return person;
         }
     }
     return NULL;
@@ -172,10 +163,17 @@ TSubject* TBookings::findSubject(string name)  {
 }
 
 // Print
-void TBookings::print() {
+void TBookings::printBookings() {
     cout << "Belegungen:" << endl << endl;
     for(auto *booking : Bookings) {
         booking->print();
+        cout << endl;
+    }
+}
+
+void TBookings::printPersons() {
+    for(auto *person : Persons) {
+        person->print();
         cout << endl;
     }
 }

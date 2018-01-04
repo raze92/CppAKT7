@@ -30,7 +30,7 @@ void TEvent::load(ifstream* dataStream, TBookings* bookings) {
             
         } else if(tag == "teacher") {
             string teacher = XmlUtils::getContentUntilCloseTag(dataStream, "/teacher");
-            this->Teacher = bookings->findTeacher(teacher);
+            this->Teacher = bookings->findPerson(teacher);
             
         } else if(tag == "room") {
             string room = XmlUtils::getContentUntilCloseTag(dataStream, "/room");

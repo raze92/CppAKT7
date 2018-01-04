@@ -25,6 +25,11 @@ TPerson::TPerson(TPerson* person) : Address(this->getAddress()), Birthday(this->
     this->ID = ++IdIterator;
 }
 
+// Destructor
+TPerson::~TPerson() {
+    cout << "Person freigegeben: " << this->Name;
+}
+
 // Getter
 unsigned TPerson::getID() {
     return ID;

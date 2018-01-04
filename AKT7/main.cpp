@@ -7,16 +7,13 @@
 //
 
 #include <iostream>
-
 using namespace std;
-
 #include "tbookings.h"
-
 int main()
 {
-    TBookings Belegungen("belegungen.xml");
-    
-    Belegungen.print();
-    
+    TBookings Belegungen("/Users/Micha/Documents/workspace/workspace-cpp/CppAKT7/AKT7/belegungen.xml");
+    Belegungen.printPersons();
+    cout << endl;
+    Belegungen.printBookings();
     return 0;
 }

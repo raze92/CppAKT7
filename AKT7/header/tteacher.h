@@ -16,21 +16,24 @@
 #include "tbooking.h"
 #include "XmlUtils.h"
 
-class TTeacher : public TPerson {
+class TTeacher : virtual public TPerson {
 public:
     // Constructor
     TTeacher();
     TTeacher(int personalNr, TPerson* person);
     
+    // Destructor
+    ~TTeacher();
+    
     // Getter
     int getPersonalNr();
     
     // Load
-    void load(ifstream* dataStream);
+    virtual void load(ifstream* dataStream);
     
     // Print
-    void print();
-private:
+    virtual void print();
+protected:
     int PersonalNr;
 };
 

@@ -22,6 +22,8 @@ public:
             unsigned short day, unsigned short month, unsigned short year);
     TPerson(TPerson* person);
     
+    // Destructor
+    ~TPerson();
     
     // Getter
     unsigned getID();
@@ -30,7 +32,7 @@ public:
     TDate getBirthday();
     
     // Print
-    void print();
+    virtual void print();
     
 protected:
     unsigned ID;
