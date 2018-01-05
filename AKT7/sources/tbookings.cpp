@@ -97,11 +97,12 @@ TBookings::~TBookings() {
     cout << "ok" << endl;
     
     cout << "Personen freigeben ... ";
+    cout << endl;
     for(auto *person : Persons) {
         delete person;
         cout << endl;
     }
-    cout << "ok" << endl;
+    cout << "Personen freigeben ... ok" << endl;
     
     cout << "Faecher freigeben ... " << endl;
     for(auto *subject : Subjects) {
@@ -109,7 +110,7 @@ TBookings::~TBookings() {
     }
     cout << "Faecher freigeben ... ok" << endl;
     
-    cout << "Dozenten freigeben ... ";
+    cout << "Belegungen freigeben ... ";
     for(auto *booking : Bookings) {
         delete booking;
     }

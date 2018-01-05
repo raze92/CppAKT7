@@ -19,7 +19,7 @@ TTeacher::TTeacher(int personalNr, TPerson* person) : TPerson(person) {
 
 //Destructor
 TTeacher::~TTeacher() {
-    cout << "Dozent freigegeben: " << TPerson::Name;
+    cout << "\tDozent freigegeben: " << TPerson::Name << endl;
 }
 
 // Getter

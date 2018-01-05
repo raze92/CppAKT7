@@ -23,7 +23,7 @@ public:
     TPerson(TPerson* person);
     
     // Destructor
-    ~TPerson();
+    virtual ~TPerson();
     
     // Getter
     unsigned getID();

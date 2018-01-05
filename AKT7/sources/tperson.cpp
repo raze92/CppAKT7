@@ -27,7 +27,7 @@ TPerson::TPerson(TPerson* person) : Address(this->getAddress()), Birthday(this->
 
 // Destructor
 TPerson::~TPerson() {
-    cout << "Person freigegeben: " << this->Name;
+    cout << "\tPerson freigegeben: " << this->Name;
 }
 
 // Getter

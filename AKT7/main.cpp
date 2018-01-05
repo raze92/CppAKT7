@@ -11,7 +11,7 @@ using namespace std;
 #include "tbookings.h"
 int main()
 {
-    TBookings Belegungen("/Users/Micha/Documents/workspace/workspace-cpp/CppAKT7/AKT7/belegungen.xml");
+    TBookings Belegungen("belegungen.xml");
     Belegungen.printPersons();
     cout << endl;
     Belegungen.printBookings();

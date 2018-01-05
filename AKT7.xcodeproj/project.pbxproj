@@ -10,6 +10,7 @@
 		860B33F91F891DCB002AECAB /* tdate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 860B33F81F891DCB002AECAB /* tdate.cpp */; };
 		860B33FB1F891DFD002AECAB /* ttime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 860B33FA1F891DFD002AECAB /* ttime.cpp */; };
 		8617BF291FF51F8A00B7946A /* ttutor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8617BF281FF51F8A00B7946A /* ttutor.cpp */; };
+		8617BF421FFFB60900B7946A /* belegungen.xml in Copy Files */ = {isa = PBXBuildFile; fileRef = 8617BF411FFFB60300B7946A /* belegungen.xml */; };
 		8632C26B1FC8546700D6696A /* tstudent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8632C26A1FC8546700D6696A /* tstudent.cpp */; };
 		8632C2701FC8565700D6696A /* tstudy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8632C26F1FC8565700D6696A /* tstudy.cpp */; };
 		8632C2731FC85D5C00D6696A /* tteacher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8632C2721FC85D5C00D6696A /* tteacher.cpp */; };
@@ -28,14 +29,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		860B33E71F8917A5002AECAB /* CopyFiles */ = {
+		860B33E71F8917A5002AECAB /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				8617BF421FFFB60900B7946A /* belegungen.xml in Copy Files */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -47,7 +50,7 @@
 		860B33FA1F891DFD002AECAB /* ttime.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ttime.cpp; sourceTree = "<group>"; };
 		8617BF281FF51F8A00B7946A /* ttutor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ttutor.cpp; sourceTree = "<group>"; };
 		8617BF2A1FF51FAE00B7946A /* ttutor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ttutor.h; sourceTree = "<group>"; };
-		8617BF2B1FF5361C00B7946A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/belegungen.xml; sourceTree = "<group>"; };
+		8617BF411FFFB60300B7946A /* belegungen.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = belegungen.xml; sourceTree = "<group>"; };
 		8632C2691FC8544C00D6696A /* tstudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tstudent.h; sourceTree = "<group>"; };
 		8632C26A1FC8546700D6696A /* tstudent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tstudent.cpp; sourceTree = "<group>"; };
 		8632C26E1FC8564600D6696A /* tstudy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tstudy.h; sourceTree = "<group>"; };
@@ -109,7 +112,7 @@
 		860B33EB1F8917A5002AECAB /* AKT7 */ = {
 			isa = PBXGroup;
 			children = (
-				8617BF2C1FF5361C00B7946A /* belegungen.xml */,
+				8617BF411FFFB60300B7946A /* belegungen.xml */,
 				860B33F71F891D5A002AECAB /* sources */,
 				860B33F31F89186C002AECAB /* header */,
 				86955A3A1FB5005C00BAC6EF /* main.cpp */,
@@ -174,7 +177,7 @@
 			buildPhases = (
 				860B33E51F8917A5002AECAB /* Sources */,
 				860B33E61F8917A5002AECAB /* Frameworks */,
-				860B33E71F8917A5002AECAB /* CopyFiles */,
+				860B33E71F8917A5002AECAB /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -244,17 +247,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8617BF2C1FF5361C00B7946A /* belegungen.xml */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8617BF2B1FF5361C00B7946A /* en */,
-			);
-			name = belegungen.xml;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		860B33EE1F8917A5002AECAB /* Debug */ = {

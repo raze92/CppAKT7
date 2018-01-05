@@ -28,7 +28,7 @@ TStudent::TStudent(int matriculationNr, unsigned short term, short credits, TStu
 
 // Destructor
 TStudent::~TStudent() {
-    cout << "Student freigegeben: " << TPerson::Name;
+    cout << "\tStudent freigegeben: " << TPerson::Name << endl;
 }
 
 // Getter
