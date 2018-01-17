@@ -165,6 +165,24 @@
   <credits>21</credits>
   <study>Technische Informatik</study>
  </student>
+ <student>
+  <name>Ulrich Unlustig</name>
+  <address>
+   <street>Uhlandweg</street>
+   <housenr>32a</housenr>
+   <zipcode>19885</zipcode>
+   <city>Untertupfingen</city>
+  </address>
+  <birthday>
+   <day>9</day>
+   <month>11</month>
+   <year>1987</year>
+  </birthday>
+  <matriculationnr>191553</matriculationnr>
+  <term>2</term>
+  <credits>22</credits>
+  <study>Technische Informatik</study>
+ </student>
  <teacher>
   <name>Kevin Kaufmann</name>
   <address>
@@ -195,6 +213,7 @@
   </birthday>
   <personalnr>97</personalnr>
   <nroftermsastutor>2</nroftermsastutor>
+  <study>Technische Informatik</study>
  </tutor>
  <teacher>
   <name>Sabine Sauber</name>
@@ -210,6 +229,21 @@
    <year>1962</year>
   </birthday>
   <personalnr>68</personalnr>
+ </teacher>
+ <teacher>
+  <name>Peter Patzig</name>
+  <address>
+   <street>Pankower Str.</street>
+   <housenr>21</housenr>
+   <zipcode>14197</zipcode>
+   <city>Berlin</city>
+  </address>
+  <birthday>
+   <day>29</day>
+   <month>12</month>
+   <year>1963</year>
+  </birthday>
+  <personalnr>45</personalnr>
  </teacher>
  <teacher>
   <name>Willi Witzig</name>
@@ -271,6 +305,26 @@
    <room>D 209</room>
    <block>2</block>
    <weekday>Mi</weekday>
+   <period>1</period>
+  </event>
+ </subject>
+ <subject>
+  <name>Maschinenorientiertes Programmieren</name>
+  <subjectnr>130011</subjectnr>
+  <event>
+   <name>SU MOP I</name>
+   <teacher>Peter Patzig</teacher>
+   <room>D 136 (H5)</room>
+   <block>2</block>
+   <weekday>Do</weekday>
+   <period>1</period>
+  </event>
+  <event>
+   <name>UEB MOP I</name>
+   <teacher>Peter Patzig</teacher>
+   <room>D 114</room>
+   <block>3</block>
+   <weekday>Do</weekday>
    <period>1</period>
   </event>
  </subject>
@@ -364,6 +418,51 @@
    <hour>15</hour>
    <minute>15</minute>
    <second>15</second>
+  </bookingtime>
+ </booking>
+ <booking>
+  <bookingnr>5</bookingnr>
+  <subject>Maschinenorientiertes Programmieren</subject>
+  <student>Ulrich Unlustig</student>
+  <bookingdate>
+   <day>15</day>
+   <month>9</month>
+   <year>2017</year>
+  </bookingdate>
+  <bookingtime>
+   <hour>16</hour>
+   <minute>16</minute>
+   <second>16</second>
+  </bookingtime>
+ </booking>
+ <booking>
+  <bookingnr>6</bookingnr>
+  <subject>Englisch</subject>
+  <student>Ulrich Unlustig</student>
+  <bookingdate>
+   <day>15</day>
+   <month>9</month>
+   <year>2017</year>
+  </bookingdate>
+  <bookingtime>
+   <hour>16</hour>
+   <minute>17</minute>
+   <second>18</second>
+  </bookingtime>
+ </booking>
+ <booking>
+  <bookingnr>7</bookingnr>
+  <subject>Informatik I</subject>
+  <student>Ulrich Unlustig</student>
+  <bookingdate>
+   <day>15</day>
+   <month>9</month>
+   <year>2017</year>
+  </bookingdate>
+  <bookingtime>
+   <hour>16</hour>
+   <minute>18</minute>
+   <second>20</second>
   </bookingtime>
  </booking>
 </data>

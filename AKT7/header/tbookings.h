@@ -21,10 +21,18 @@
 #include "ttutor.h"
 #include "tsubject.h"
 #include "tbooking.h"
+#include "tschedule.h"
 #include "XmlUtils.h"
 
 class TStudent;
 class TSubject;
+
+enum OutputFormat {
+    ofPersons,
+    ofBookings,
+    ofScheduleOfStudents,
+    ofScheduleOfStudies
+};
 
 class TBookings {
 public:
@@ -45,6 +53,8 @@ public:
     void printBookings();
     void printPersons();
     
+    void operator() (OutputFormat format);
+    
 private:
     vector<TBlock*> Blocks;
     vector<TRoom*> Rooms;
@@ -52,6 +62,10 @@ private:
     vector<TPerson*> Persons;
     vector<TSubject*> Subjects;
     vector<TBooking*> Bookings;
+    TSchedule Schedule;
+    
+    void printScheduleOfStudents(TPerson* student);
+    void printScheduleOfStudies(TStudy* study);
 };
 
 #endif /* tbookings_h */

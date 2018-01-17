@@ -17,6 +17,23 @@ TEvent::TEvent() { }
 TEvent::TEvent(string name, TPerson* teacher, TRoom* room, TBlock* block, TWeekday weekday, short period)
 : Name(name), Teacher(teacher), Room(room), Block(block), Weekday(weekday), Period(period) { }
 
+// Getter
+string TEvent::getName() {
+    return this->Name;
+}
+TPerson* TEvent::getTeacher() {
+    return this->Teacher;
+}
+TRoom* TEvent::getRoom() {
+    return this->Room;
+}
+TBlock* TEvent::getBlock() {
+    return this->Block;
+}
+TWeekday TEvent::getWeekday() {
+    return this->Weekday;
+}
+
 // Load
 void TEvent::load(ifstream* dataStream, TBookings* bookings) {
     while(!dataStream->eof()) {
@@ -42,7 +59,7 @@ void TEvent::load(ifstream* dataStream, TBookings* bookings) {
             
         } else if(tag == "weekday") {
             string weekday = XmlUtils::getContentUntilCloseTag(dataStream, "/weekday");
-            this->Weekday = getWeekday(weekday);
+            this->Weekday = ::getWeekday(weekday);
             
         } else if(tag == "period") {
             string period = XmlUtils::getContentUntilCloseTag(dataStream, "/period");

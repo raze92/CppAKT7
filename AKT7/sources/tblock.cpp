@@ -64,5 +64,5 @@ void TBlock::load(ifstream* dataStream) {
 void TBlock::print() {
     Begin.print();
     cout << " - ";
-    getEnd().print();
+    (Begin + 90).print();
 }

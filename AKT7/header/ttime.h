@@ -43,6 +43,9 @@ public:
     // Print
     void print();
     
+    // Operator
+    friend TTime operator+ (const TTime &a, const short &b);
+    
 private:
     unsigned short Hour;
     unsigned short Minute;

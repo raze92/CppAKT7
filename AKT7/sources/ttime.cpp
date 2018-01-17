@@ -128,3 +128,13 @@ void TTime::print() {
         cout << ':' << setfill('0') << setw(2) << Second;
     }
 }
+
+// Operator
+TTime operator+ (const TTime &a, const short &b) {
+    unsigned short endHour = a.Hour;
+    unsigned short endMinute = a.Minute + b;
+    endHour += endMinute / 60;
+    endMinute %= 60;
+    endHour %= 24;
+    return TTime(endHour, endMinute);
+}

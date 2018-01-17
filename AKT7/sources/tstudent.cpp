@@ -33,7 +33,11 @@ TStudent::~TStudent() {
 
 // Getter
 int TStudent::getMatriculationNr() {
-    return MatriculationNr;
+    return this->MatriculationNr;
+}
+
+TStudy* TStudent::getStudy() {
+    return this->Study;
 }
 
 // Load
@@ -73,4 +77,7 @@ void TStudent::print() {
     cout << TPerson::Name << "(* ";
     TPerson::Birthday.print();
     cout <<  "; MatrNr. " << this->MatriculationNr << ")";
+}
+void TStudent::print(ostream& os) {
+    os << TPerson::Name << "(* " << TPerson::Birthday << "; MatrNr. " << MatriculationNr << ")";
 }

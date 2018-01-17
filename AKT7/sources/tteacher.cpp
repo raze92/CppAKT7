@@ -53,5 +53,8 @@ void TTeacher::load(ifstream* dataStream) {
 
 // Print
 void TTeacher::print() {
-    cout << TPerson::Name << " (PersNr. " << this->PersonalNr << ")";
+    cout << this->TPerson::Name << " (PersNr. " << this->PersonalNr << ")";
+}
+void TTeacher::print(ostream& os) {
+    os << TPerson::Name << " (PersNr. " << PersonalNr << ")";
 }

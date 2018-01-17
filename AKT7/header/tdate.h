@@ -41,6 +41,9 @@ public:
     // Print
     void print();
     
+    // Operator
+    friend ostream& operator<<(ostream& os, const TDate& dt);
+    
 private:
     unsigned short Day;
     unsigned short Month;

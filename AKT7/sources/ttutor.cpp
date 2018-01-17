@@ -17,7 +17,7 @@ TTutor::TTutor() {
 
 // Destructor
 TTutor::~TTutor() {
-    cout << "Tutor freigegeben: " << TPerson::Name;
+    cout << "\tTutor freigegeben: " << TPerson::Name << endl;
 }
 
 // Load
@@ -67,4 +67,9 @@ void TTutor::print() {
     TPerson::Birthday.print();
     cout <<  "; MatrNr. " << TStudent::MatriculationNr;
     cout <<  "; PersNr. " << TTeacher::PersonalNr << ")";
+}
+void TTutor::print(ostream& os) {
+    os << TPerson::Name << "(* " << TPerson::Birthday;
+    os <<  "; MatrNr. " << TStudent::MatriculationNr;
+    os <<  "; PersNr. " << TTeacher::PersonalNr << ")";
 }

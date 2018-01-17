@@ -33,6 +33,10 @@ public:
     
     // Print
     virtual void print();
+    virtual void print(ostream& os);
+    
+    // Operator
+    friend ostream& operator<< (ostream& out, TPerson& p);
     
 protected:
     unsigned ID;

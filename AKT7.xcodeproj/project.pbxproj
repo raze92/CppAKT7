@@ -26,6 +26,7 @@
 		86B1AD591F910EE60050040C /* tblock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86B1AD581F910EE60050040C /* tblock.cpp */; };
 		86CF79D31FD00EE800442605 /* tbooking.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86CF79D21FD00EE800442605 /* tbooking.cpp */; };
 		86CF79D71FD0189400442605 /* tbookings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86CF79D61FD0189400442605 /* tbookings.cpp */; };
+		86DB83F12008DDAA00936B1C /* tschedule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86DB83F02008DDAA00936B1C /* tschedule.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,7 +34,7 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
 			dstPath = "";
-			dstSubfolderSpec = 16;
+			dstSubfolderSpec = 6;
 			files = (
 				8617BF421FFFB60900B7946A /* belegungen.xml in Copy Files */,
 			);
@@ -80,6 +81,8 @@
 		86CF79D51FD0169100442605 /* tbookings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tbookings.h; sourceTree = "<group>"; };
 		86CF79D61FD0189400442605 /* tbookings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tbookings.cpp; sourceTree = "<group>"; };
 		86CF79D81FD02B6500442605 /* XmlUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XmlUtils.h; sourceTree = "<group>"; };
+		86DB83F02008DDAA00936B1C /* tschedule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tschedule.cpp; sourceTree = "<group>"; };
+		86DB83F22008DDBC00936B1C /* tschedule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tschedule.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				860B33F51F89196A002AECAB /* tdate.h */,
+				86DB83F22008DDBC00936B1C /* tschedule.h */,
 				860B33F61F891B5D002AECAB /* ttime.h */,
 				86B1AD531F9109E50050040C /* troom.h */,
 				86B1AD571F910ED40050040C /* tblock.h */,
@@ -164,6 +168,7 @@
 				868828F21FD1A8EE00FBF820 /* XmlUtils.cpp */,
 				868828F41FD1AA0200FBF820 /* tweekday.cpp */,
 				8617BF281FF51F8A00B7946A /* ttutor.cpp */,
+				86DB83F02008DDAA00936B1C /* tschedule.cpp */,
 			);
 			path = sources;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 				86CF79D71FD0189400442605 /* tbookings.cpp in Sources */,
 				8617BF291FF51F8A00B7946A /* ttutor.cpp in Sources */,
 				86955A3B1FB5005C00BAC6EF /* main.cpp in Sources */,
+				86DB83F12008DDAA00936B1C /* tschedule.cpp in Sources */,
 				86B16E1B1F97C04400BA6C2A /* taddress.cpp in Sources */,
 				8632C2701FC8565700D6696A /* tstudy.cpp in Sources */,
 				8632C2731FC85D5C00D6696A /* tteacher.cpp in Sources */,

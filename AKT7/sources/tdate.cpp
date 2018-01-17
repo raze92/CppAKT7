@@ -100,3 +100,11 @@ void TDate::print() {
     cout << setfill('0') << setw(2) << Month << '.';
     cout << Year;
 }
+
+// Operator
+ostream& operator<<(ostream& os, const TDate& dt) {
+    os << setfill('0') << setw(2) << dt.Day << '.';
+    os << setfill('0') << setw(2) << dt.Month << '.';
+    os << dt.Year;
+    return os;
+}

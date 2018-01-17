@@ -26,6 +26,10 @@ public:
     TBooking();
     TBooking(int bookingNr, TSubject* subject, TStudent* student, TDate* bookingDate, TTime* bookingTime);
     
+    // Getter
+    TPerson* getStudent();
+    TSubject* getSubject();
+    
     // Load
     void load(ifstream* dataStream, TBookings* bookings);
     

@@ -26,6 +26,13 @@ TBooking::TBooking(int bookingNr,
                     BookingDate(bookingDate),
                     BookingTime(bookingTime) {}
 
+TPerson* TBooking::getStudent() {
+    return this->Student;
+}
+
+TSubject* TBooking::getSubject() {
+    return this->Subject;
+}
 
 // Load
 void TBooking::load(ifstream* dataStream, TBookings* bookings) {

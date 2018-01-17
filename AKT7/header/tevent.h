@@ -17,7 +17,6 @@
 #include "troom.h"
 #include "tblock.h"
 #include "tweekday.h"
-//#include "tbookings.h"
 
 class TBookings;
 
@@ -26,6 +25,13 @@ public:
     // Constructor
     TEvent();
     TEvent(string name, TPerson* teacher, TRoom* room, TBlock* block, TWeekday weekday, short period);
+    
+    // Getter
+    string getName();
+    TPerson* getTeacher();
+    TRoom* getRoom();
+    TBlock* getBlock();
+    TWeekday getWeekday();
     
     // Load
     void load(ifstream* dataStream, TBookings* bookings);

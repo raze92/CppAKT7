@@ -24,7 +24,9 @@ public:
     // Load
     void load(ifstream *dataStream, TBookings* bookings);
     
+    // Print
     void print();
+    void print(ostream& os);
 private:
     unsigned NrOfTemrsAsTutor;
 };

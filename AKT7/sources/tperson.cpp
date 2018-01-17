@@ -50,5 +50,14 @@ void TPerson::print() {
     Birthday.print();
     cout << ")";
 }
+void TPerson::print(ostream& os) {
+    os << Name << " (* " << Birthday << ")";
+}
+
+// Operator
+ostream& operator<< (ostream& out, TPerson& p) {
+    p.print(out);
+    return out;
+}
 
 unsigned TPerson::IdIterator = 0;

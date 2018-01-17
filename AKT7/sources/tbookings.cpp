@@ -178,3 +178,66 @@ void TBookings::printPersons() {
         cout << endl;
     }
 }
+
+void TBookings::printScheduleOfStudents(TPerson* student) {
+    Schedule.reset("Stundenplan für " + student->getName());
+    for(auto *booking : Bookings) {
+        if(booking->getStudent() == student) {
+            TSubject* subject = booking->getSubject();
+            for(auto *event : subject->getEvents()) {
+                Schedule.addEvent(event);
+            }
+        }
+    }
+    cout << Schedule << endl;
+}
+
+void TBookings::printScheduleOfStudies(TStudy* study) {
+    Schedule.reset("Stundenplan für " + study->getName());
+    for(auto *person : Persons) {
+        TStudent* student = dynamic_cast<TStudent*>(person);
+        if(student != nullptr && student->getStudy() == study) {
+            for(auto *booking : Bookings) {
+                if(booking->getStudent() == student) {
+                    TSubject* subject = booking->getSubject();
+                    for(auto *event : subject->getEvents()) {
+                        Schedule.addEvent(event);
+                    }
+                }
+            }
+        }
+    }
+    cout << Schedule << endl;
+}
+
+// Operator
+void TBookings::operator() (OutputFormat format){
+    switch(format) {
+        case ofPersons:
+            cout << "Personen:" << endl << endl;
+            for(auto *person : Persons) {
+                cout << (*person) << endl;
+            }
+            cout << endl;
+            break;
+        case ofBookings:
+            printBookings();
+            break;
+        case ofScheduleOfStudies:
+            cout << "Stundenplaene der Studiengaenge:" << endl << endl;
+            for(auto *study : Studies) {
+                printScheduleOfStudies(study);
+            }
+            break;
+        case ofScheduleOfStudents:
+            cout << "Stundenplaene der Studenten:" << endl << endl;
+            for(auto *person : Persons) {
+                if(dynamic_cast<TStudent*>(person) != nullptr) {
+                    printScheduleOfStudents(person);
+                }
+            }
+            break;
+        default:
+            break;
+    }
+}

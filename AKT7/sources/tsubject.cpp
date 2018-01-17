@@ -27,7 +27,11 @@ TSubject::~TSubject() {
 
 // Getter
 string TSubject::getName() {
-    return Name;
+    return this->Name;
+}
+
+vector<TEvent*> TSubject::getEvents() {
+    return this->Events;
 }
 
 // Add

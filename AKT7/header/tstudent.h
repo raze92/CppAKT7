@@ -27,16 +27,19 @@ public:
     TStudent(int matriculationNr, unsigned short term, short credits, TStudy* study, TPerson* person);
     
     // Destructor
-    ~TStudent();
+    virtual ~TStudent();
     
     // Getter
     int getMatriculationNr();
+    TStudy* getStudy();
     
     // Load
     virtual void load(ifstream* dataStream, TBookings* bookings);
     
     // Print
     virtual void print();
+    virtual void print(ostream& os);
+    
 protected:
     int MatriculationNr;
     unsigned short Term;

@@ -14,7 +14,6 @@
 #include <fstream>
 
 #include "tevent.h"
-//#include "tbookings.h"
 #include "XmlUtils.h"
 
 class TBookings;
@@ -30,6 +29,7 @@ public:
     
     // Getter
     string getName();
+    vector<TEvent*> getEvents();
     
     // Add
     void addEvent(TEvent* event);

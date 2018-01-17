@@ -23,7 +23,7 @@ public:
     TTeacher(int personalNr, TPerson* person);
     
     // Destructor
-    ~TTeacher();
+    virtual ~TTeacher();
     
     // Getter
     int getPersonalNr();
@@ -33,6 +33,8 @@ public:
     
     // Print
     virtual void print();
+    virtual void print(ostream& os);
+    
 protected:
     int PersonalNr;
 };
