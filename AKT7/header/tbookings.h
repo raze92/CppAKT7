@@ -23,6 +23,7 @@
 #include "tbooking.h"
 #include "tschedule.h"
 #include "XmlUtils.h"
+#include "tlist.h"
 
 class TStudent;
 class TSubject;
@@ -59,7 +60,7 @@ private:
     vector<TBlock*> Blocks;
     vector<TRoom*> Rooms;
     vector<TStudy*> Studies;
-    vector<TPerson*> Persons;
+    TList<TPerson*> Persons;
     vector<TSubject*> Subjects;
     vector<TBooking*> Bookings;
     TSchedule Schedule;

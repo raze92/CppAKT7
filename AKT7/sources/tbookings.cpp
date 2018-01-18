@@ -146,10 +146,12 @@ TStudy* TBookings::findStudy(string name) {
 }
 
 TPerson* TBookings::findPerson(string name)  {
-    for(auto *person : Persons) {
-        if(person->getName() == name) {
-            return person;
+    TList<TPerson*>::Iterator iter(Persons);
+    while(iter != Persons.end()) {
+        if(((TPerson*)*iter)->getName() == name) {
+            return *iter;
         }
+        iter++;
     }
     return NULL;
 }
@@ -173,9 +175,11 @@ void TBookings::printBookings() {
 }
 
 void TBookings::printPersons() {
-    for(auto *person : Persons) {
-        person->print();
+    TList<TPerson*>::Iterator iter(Persons);
+    while(iter != Persons.end()) {
+        ((TPerson*)(*iter))->print();
         cout << endl;
+        iter++;
     }
 }
 
@@ -213,12 +217,15 @@ void TBookings::printScheduleOfStudies(TStudy* study) {
 // Operator
 void TBookings::operator() (OutputFormat format){
     switch(format) {
-        case ofPersons:
-            cout << "Personen:" << endl << endl;
-            for(auto *person : Persons) {
-                cout << (*person) << endl;
+        case ofPersons: {
+                cout << "Personen:" << endl << endl;
+                TList<TPerson*>::Iterator iter(Persons);
+                while(iter != Persons.end()) {
+                    cout << **iter << endl;
+                    iter++;
+                }
+                cout << endl;
             }
-            cout << endl;
             break;
         case ofBookings:
             printBookings();
